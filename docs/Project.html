@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Example Notebook &#8212; Jupyter Book Template</title>
+    <title>&lt;no title&gt; &#8212; Jupyter Book Template</title>
   
   
   
@@ -62,10 +62,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/notebook';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/Project';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Jupyter Book Tutorial" href="home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -150,8 +149,8 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Example Notebook</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Example Notebook</a></li>
 </ul>
 
     </div>
@@ -206,7 +205,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/docs/notebook.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/docs/Project.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -254,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdocs/notebook.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdocs/Project.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/docs/notebook.ipynb" target="_blank"
+      <li><a href="../_sources/docs/Project.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Example Notebook</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -375,10 +374,9 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
+                <ul class="simple visible nav section-nav flex-column">
 </ul>
+
             </nav>
         </div>
     </div>
@@ -389,31 +387,362 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="example-notebook">
-<h1>Example Notebook<a class="headerlink" href="#example-notebook" title="Permalink to this heading">#</a></h1>
-<p>(Last updated: May 22, 2023)</p>
-<p>You can also create content with Jupyter Notebooks.
-This means that you can include code blocks and their outputs in your book.
-In this notebook, we show some examples of loading and plotting data.
-Check <a class="reference external" href="https://jupyterbook.org/en/stable/content/executable/index.html">this documentation</a> about how to write executable content.</p>
-<div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="n">file1</span><span class="o">=</span><span class="s1">&#39;/Users/jaloef/infovis/infovis_project/docs/2017.csv&#39;</span> 
+<span class="n">file2</span><span class="o">=</span> <span class="s1">&#39;/Users/jaloef/infovis/infovis_project/docs/Mental health Depression disorder Data.csv&#39;</span> 
+
+<span class="n">wereld</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file1</span><span class="p">)</span>
+<span class="n">mentaal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file2</span><span class="p">)</span>
+
+<span class="n">wereld</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file1</span><span class="p">)</span>
+<span class="n">mentaal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file2</span><span class="p">)</span>
+
+<span class="n">wereld_2017</span><span class="o">=</span> <span class="n">wereld</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">mentaal_2017</span> <span class="o">=</span> <span class="n">mentaal</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">mentaal</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2017&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="n">mentaal_2017</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;Entity&quot;</span><span class="p">:</span> <span class="s2">&quot;Country&quot;</span><span class="p">},</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">wereld_2017</span><span class="p">,</span><span class="n">mentaal_2017</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+
+
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Economy..GDP.per.Capita.&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Happiness.Score&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/26/857cdtq51v5b981sk9klpqzm0000gn/T/ipykernel_24187/3576760039.py:9: DtypeWarning: Columns (5,6) have mixed types. Specify dtype option on import or set low_memory=False.
+  mentaal = pd.read_csv(file2)
+/var/folders/26/857cdtq51v5b981sk9klpqzm0000gn/T/ipykernel_24187/3576760039.py:12: DtypeWarning: Columns (5,6) have mixed types. Specify dtype option on import or set low_memory=False.
+  mentaal = pd.read_csv(file2)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Happiness.Rank</th>
+      <th>Happiness.Score</th>
+      <th>Whisker.high</th>
+      <th>Whisker.low</th>
+      <th>Economy..GDP.per.Capita.</th>
+      <th>Family</th>
+      <th>Health..Life.Expectancy.</th>
+      <th>Freedom</th>
+      <th>Generosity</th>
+      <th>...</th>
+      <th>Dystopia.Residual</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Schizophrenia (%)</th>
+      <th>Bipolar disorder (%)</th>
+      <th>Eating disorders (%)</th>
+      <th>Anxiety disorders (%)</th>
+      <th>Drug use disorders (%)</th>
+      <th>Depression (%)</th>
+      <th>Alcohol use disorders (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Norway</td>
+      <td>1</td>
+      <td>7.537</td>
+      <td>7.594445</td>
+      <td>7.479556</td>
+      <td>1.616463</td>
+      <td>1.533524</td>
+      <td>0.796667</td>
+      <td>0.635423</td>
+      <td>0.362012</td>
+      <td>...</td>
+      <td>2.277027</td>
+      <td>NOR</td>
+      <td>2017</td>
+      <td>0.211484</td>
+      <td>0.856901</td>
+      <td>0.570363</td>
+      <td>7.585503</td>
+      <td>0.832286</td>
+      <td>3.771910</td>
+      <td>1.419003</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Denmark</td>
+      <td>2</td>
+      <td>7.522</td>
+      <td>7.581728</td>
+      <td>7.462272</td>
+      <td>1.482383</td>
+      <td>1.551122</td>
+      <td>0.792566</td>
+      <td>0.626007</td>
+      <td>0.355280</td>
+      <td>...</td>
+      <td>2.313707</td>
+      <td>DNK</td>
+      <td>2017</td>
+      <td>0.254017</td>
+      <td>1.005494</td>
+      <td>0.540025</td>
+      <td>5.314635</td>
+      <td>0.895411</td>
+      <td>3.291885</td>
+      <td>1.730723</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Iceland</td>
+      <td>3</td>
+      <td>7.504</td>
+      <td>7.622030</td>
+      <td>7.385970</td>
+      <td>1.480633</td>
+      <td>1.610574</td>
+      <td>0.833552</td>
+      <td>0.627163</td>
+      <td>0.475540</td>
+      <td>...</td>
+      <td>2.322715</td>
+      <td>ISL</td>
+      <td>2017</td>
+      <td>0.257617</td>
+      <td>0.971122</td>
+      <td>0.558014</td>
+      <td>5.290988</td>
+      <td>0.725036</td>
+      <td>3.361665</td>
+      <td>1.249029</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Switzerland</td>
+      <td>4</td>
+      <td>7.494</td>
+      <td>7.561772</td>
+      <td>7.426227</td>
+      <td>1.564980</td>
+      <td>1.516912</td>
+      <td>0.858131</td>
+      <td>0.620071</td>
+      <td>0.290549</td>
+      <td>...</td>
+      <td>2.276716</td>
+      <td>CHE</td>
+      <td>2017</td>
+      <td>0.262487</td>
+      <td>0.953996</td>
+      <td>0.573969</td>
+      <td>5.359393</td>
+      <td>1.006218</td>
+      <td>3.708060</td>
+      <td>1.379690</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Finland</td>
+      <td>5</td>
+      <td>7.469</td>
+      <td>7.527542</td>
+      <td>7.410458</td>
+      <td>1.443572</td>
+      <td>1.540247</td>
+      <td>0.809158</td>
+      <td>0.617951</td>
+      <td>0.245483</td>
+      <td>...</td>
+      <td>2.430182</td>
+      <td>FIN</td>
+      <td>2017</td>
+      <td>0.257444</td>
+      <td>1.005826</td>
+      <td>0.594938</td>
+      <td>3.752062</td>
+      <td>0.951914</td>
+      <td>4.792736</td>
+      <td>2.605061</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>142</th>
+      <td>Rwanda</td>
+      <td>151</td>
+      <td>3.471</td>
+      <td>3.543030</td>
+      <td>3.398970</td>
+      <td>0.368746</td>
+      <td>0.945707</td>
+      <td>0.326425</td>
+      <td>0.581844</td>
+      <td>0.252756</td>
+      <td>...</td>
+      <td>0.540061</td>
+      <td>RWA</td>
+      <td>2017</td>
+      <td>0.163688</td>
+      <td>0.62571</td>
+      <td>0.115817</td>
+      <td>3.702435</td>
+      <td>0.570294</td>
+      <td>3.869450</td>
+      <td>2.342694</td>
+    </tr>
+    <tr>
+      <th>143</th>
+      <td>Syria</td>
+      <td>152</td>
+      <td>3.462</td>
+      <td>3.663669</td>
+      <td>3.260331</td>
+      <td>0.777153</td>
+      <td>0.396103</td>
+      <td>0.500533</td>
+      <td>0.081539</td>
+      <td>0.493664</td>
+      <td>...</td>
+      <td>1.061574</td>
+      <td>SYR</td>
+      <td>2017</td>
+      <td>0.188966</td>
+      <td>0.809811</td>
+      <td>0.159349</td>
+      <td>4.974985</td>
+      <td>1.510989</td>
+      <td>3.582073</td>
+      <td>0.621551</td>
+    </tr>
+    <tr>
+      <th>144</th>
+      <td>Tanzania</td>
+      <td>153</td>
+      <td>3.349</td>
+      <td>3.461430</td>
+      <td>3.236570</td>
+      <td>0.511136</td>
+      <td>1.041990</td>
+      <td>0.364509</td>
+      <td>0.390018</td>
+      <td>0.354256</td>
+      <td>...</td>
+      <td>0.621130</td>
+      <td>TZA</td>
+      <td>2017</td>
+      <td>0.165215</td>
+      <td>0.626014</td>
+      <td>0.129857</td>
+      <td>3.636165</td>
+      <td>0.518625</td>
+      <td>3.685748</td>
+      <td>1.550497</td>
+    </tr>
+    <tr>
+      <th>145</th>
+      <td>Burundi</td>
+      <td>154</td>
+      <td>2.905</td>
+      <td>3.074690</td>
+      <td>2.735310</td>
+      <td>0.091623</td>
+      <td>0.629794</td>
+      <td>0.151611</td>
+      <td>0.059901</td>
+      <td>0.204435</td>
+      <td>...</td>
+      <td>1.683024</td>
+      <td>BDI</td>
+      <td>2017</td>
+      <td>0.154394</td>
+      <td>0.613042</td>
+      <td>0.090802</td>
+      <td>3.585760</td>
+      <td>0.500084</td>
+      <td>3.721228</td>
+      <td>1.569309</td>
+    </tr>
+    <tr>
+      <th>146</th>
+      <td>Central African Republic</td>
+      <td>155</td>
+      <td>2.693</td>
+      <td>2.864884</td>
+      <td>2.521116</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.018773</td>
+      <td>0.270842</td>
+      <td>0.280876</td>
+      <td>...</td>
+      <td>2.066005</td>
+      <td>CAF</td>
+      <td>2017</td>
+      <td>0.149087</td>
+      <td>0.59303</td>
+      <td>0.089183</td>
+      <td>3.249990</td>
+      <td>0.516703</td>
+      <td>4.211728</td>
+      <td>1.407712</td>
+    </tr>
+  </tbody>
+</table>
+<p>147 rows × 21 columns</p>
+</div></div><div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.8155430009856397
 </pre></div>
 </div>
 </div>
 </div>
-<section id="load-data">
-<h2>Load data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
-<p>You can put your data at the same directory as the notebook file and then use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to load the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the Iris flower dataset using pandas</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;iris_data.csv&quot;</span><span class="p">)</span>
-<span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_columns</span><span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Bipolar disorder (%)&#39;</span><span class="p">,</span><span class="s1">&#39;Schizophrenia (%)&#39;</span><span class="p">,</span><span class="s1">&#39;Eating disorders (%)&#39;</span><span class="p">,</span><span class="s1">&#39;Anxiety disorders (%)&#39;</span><span class="p">,</span><span class="s1">&#39;Drug use disorders (%)&#39;</span><span class="p">,</span><span class="s1">&#39;Depression (%)&#39;</span><span class="p">,</span><span class="s1">&#39;Alcohol use disorders (%)&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="n">data_columns</span><span class="p">]</span><span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">data_columns</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -436,137 +765,170 @@ Check <a class="reference external" href="https://jupyterbook.org/en/stable/cont
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>sepal_length</th>
-      <th>sepal_width</th>
-      <th>petal_length</th>
-      <th>petal_width</th>
-      <th>species</th>
-      <th>species_id</th>
+      <th>Country</th>
+      <th>Happiness.Rank</th>
+      <th>Happiness.Score</th>
+      <th>Whisker.high</th>
+      <th>Whisker.low</th>
+      <th>Economy..GDP.per.Capita.</th>
+      <th>Family</th>
+      <th>Health..Life.Expectancy.</th>
+      <th>Freedom</th>
+      <th>Generosity</th>
+      <th>...</th>
+      <th>Dystopia.Residual</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Schizophrenia (%)</th>
+      <th>Bipolar disorder (%)</th>
+      <th>Eating disorders (%)</th>
+      <th>Anxiety disorders (%)</th>
+      <th>Drug use disorders (%)</th>
+      <th>Depression (%)</th>
+      <th>Alcohol use disorders (%)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>5.1</td>
-      <td>3.5</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>setosa</td>
+      <td>Norway</td>
       <td>1</td>
+      <td>7.537</td>
+      <td>7.594445</td>
+      <td>7.479556</td>
+      <td>1.616463</td>
+      <td>1.533524</td>
+      <td>0.796667</td>
+      <td>0.635423</td>
+      <td>0.362012</td>
+      <td>...</td>
+      <td>2.277027</td>
+      <td>NOR</td>
+      <td>2017</td>
+      <td>0.211484</td>
+      <td>0.856901</td>
+      <td>0.570363</td>
+      <td>7.585503</td>
+      <td>0.832286</td>
+      <td>3.771910</td>
+      <td>1.419003</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>4.9</td>
-      <td>3.0</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>setosa</td>
-      <td>1</td>
+      <td>Denmark</td>
+      <td>2</td>
+      <td>7.522</td>
+      <td>7.581728</td>
+      <td>7.462272</td>
+      <td>1.482383</td>
+      <td>1.551122</td>
+      <td>0.792566</td>
+      <td>0.626007</td>
+      <td>0.355280</td>
+      <td>...</td>
+      <td>2.313707</td>
+      <td>DNK</td>
+      <td>2017</td>
+      <td>0.254017</td>
+      <td>1.005494</td>
+      <td>0.540025</td>
+      <td>5.314635</td>
+      <td>0.895411</td>
+      <td>3.291885</td>
+      <td>1.730723</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>4.7</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>setosa</td>
-      <td>1</td>
+      <td>Iceland</td>
+      <td>3</td>
+      <td>7.504</td>
+      <td>7.622030</td>
+      <td>7.385970</td>
+      <td>1.480633</td>
+      <td>1.610574</td>
+      <td>0.833552</td>
+      <td>0.627163</td>
+      <td>0.475540</td>
+      <td>...</td>
+      <td>2.322715</td>
+      <td>ISL</td>
+      <td>2017</td>
+      <td>0.257617</td>
+      <td>0.971122</td>
+      <td>0.558014</td>
+      <td>5.290988</td>
+      <td>0.725036</td>
+      <td>3.361665</td>
+      <td>1.249029</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4.6</td>
-      <td>3.1</td>
-      <td>1.5</td>
-      <td>0.2</td>
-      <td>setosa</td>
-      <td>1</td>
+      <td>Switzerland</td>
+      <td>4</td>
+      <td>7.494</td>
+      <td>7.561772</td>
+      <td>7.426227</td>
+      <td>1.564980</td>
+      <td>1.516912</td>
+      <td>0.858131</td>
+      <td>0.620071</td>
+      <td>0.290549</td>
+      <td>...</td>
+      <td>2.276716</td>
+      <td>CHE</td>
+      <td>2017</td>
+      <td>0.262487</td>
+      <td>0.953996</td>
+      <td>0.573969</td>
+      <td>5.359393</td>
+      <td>1.006218</td>
+      <td>3.708060</td>
+      <td>1.379690</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>5.0</td>
-      <td>3.6</td>
-      <td>1.4</td>
-      <td>0.2</td>
-      <td>setosa</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
+      <td>Finland</td>
+      <td>5</td>
+      <td>7.469</td>
+      <td>7.527542</td>
+      <td>7.410458</td>
+      <td>1.443572</td>
+      <td>1.540247</td>
+      <td>0.809158</td>
+      <td>0.617951</td>
+      <td>0.245483</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>145</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.3</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>146</th>
-      <td>6.3</td>
-      <td>2.5</td>
-      <td>5.0</td>
-      <td>1.9</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>147</th>
-      <td>6.5</td>
-      <td>3.0</td>
-      <td>5.2</td>
-      <td>2.0</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>148</th>
-      <td>6.2</td>
-      <td>3.4</td>
-      <td>5.4</td>
-      <td>2.3</td>
-      <td>virginica</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>149</th>
-      <td>5.9</td>
-      <td>3.0</td>
-      <td>5.1</td>
-      <td>1.8</td>
-      <td>virginica</td>
-      <td>3</td>
+      <td>2.430182</td>
+      <td>FIN</td>
+      <td>2017</td>
+      <td>0.257444</td>
+      <td>1.005826</td>
+      <td>0.594938</td>
+      <td>3.752062</td>
+      <td>0.951914</td>
+      <td>4.792736</td>
+      <td>2.605061</td>
     </tr>
   </tbody>
 </table>
-<p>150 rows × 6 columns</p>
+<p>5 rows × 21 columns</p>
 </div></div></div>
 </div>
-</section>
-<section id="plot-data">
-<h2>Plot data<a class="headerlink" href="#plot-data" title="Permalink to this heading">#</a></h2>
-<p>We set the repository in a way that you can use <a class="reference external" href="https://plotly.com/python/">Plotly</a> for interactive visualizations.
-For more information, check <a class="reference external" href="https://jupyterbook.org/en/stable/interactive/interactive.html">this documentation</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the Iris dataset using Plotly</span>
-<span class="n">g1</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
-                   <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">,</span>
-                   <span class="n">y</span><span class="o">=</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">,</span>
-                   <span class="n">z</span><span class="o">=</span><span class="s2">&quot;petal_width&quot;</span><span class="p">,</span>
-                   <span class="n">color</span><span class="o">=</span><span class="s2">&quot;species&quot;</span><span class="p">,</span>
-                   <span class="n">size</span><span class="o">=</span><span class="s2">&quot;petal_length&quot;</span><span class="p">,</span>
-                   <span class="n">opacity</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span>
-                   <span class="n">size_max</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
-                   <span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">)</span>
-<span class="n">g1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chart</span><span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Bipolar disorder (%)&#39;</span><span class="p">)</span>
+
+<span class="n">chart</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">barmode</span><span class="o">=</span><span class="s1">&#39;group&#39;</span><span class="p">,</span>
+    <span class="n">xaxis</span><span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;type&#39;</span><span class="p">:</span><span class="s1">&#39;category&#39;</span>
+    <span class="p">},</span>
+    <span class="n">yaxis</span><span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;tickformat&#39;</span><span class="p">:</span> <span class="s1">&#39;,.0%&#39;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">chart</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -591,9 +953,9 @@ For more information, check <a class="reference external" href="https://jupyterb
         });
         }
         </script>
-        </div><div class="output text_html"><div>                            <div id="006c8841-5e4f-44c4-ba24-6471add73679" class="plotly-graph-div" style="height:700px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("006c8841-5e4f-44c4-ba24-6471add73679")) {                    Plotly.newPlot(                        "006c8841-5e4f-44c4-ba24-6471add73679",                        [{"hovertemplate":"species=setosa<br>sepal_width=%{x}<br>sepal_length=%{y}<br>petal_width=%{z}<br>petal_length=%{marker.size}<extra></extra>","legendgroup":"setosa","marker":{"color":"#636efa","opacity":0.6,"size":[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5,1.5,1.6,1.4,1.1,1.2,1.5,1.3,1.4,1.7,1.5,1.7,1.5,1.0,1.7,1.9,1.6,1.6,1.5,1.4,1.6,1.6,1.5,1.5,1.4,1.5,1.2,1.3,1.5,1.3,1.5,1.3,1.3,1.3,1.6,1.9,1.4,1.6,1.4,1.5,1.4],"sizemode":"area","sizeref":0.007666666666666667,"symbol":"circle"},"mode":"markers","name":"setosa","scene":"scene","showlegend":true,"x":[3.5,3.0,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1,3.7,3.4,3.0,3.0,4.0,4.4,3.9,3.5,3.8,3.8,3.4,3.7,3.6,3.3,3.4,3.0,3.4,3.5,3.4,3.2,3.1,3.4,4.1,4.2,3.1,3.2,3.5,3.1,3.0,3.4,3.5,2.3,3.2,3.5,3.8,3.0,3.8,3.2,3.7,3.3],"y":[5.1,4.9,4.7,4.6,5.0,5.4,4.6,5.0,4.4,4.9,5.4,4.8,4.8,4.3,5.8,5.7,5.4,5.1,5.7,5.1,5.4,5.1,4.6,5.1,4.8,5.0,5.0,5.2,5.2,4.7,4.8,5.4,5.2,5.5,4.9,5.0,5.5,4.9,4.4,5.1,5.0,4.5,4.4,5.0,5.1,4.8,5.1,4.6,5.3,5.0],"z":[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1,0.2,0.2,0.1,0.1,0.2,0.4,0.4,0.3,0.3,0.3,0.2,0.4,0.2,0.5,0.2,0.2,0.4,0.2,0.2,0.2,0.2,0.4,0.1,0.2,0.1,0.2,0.2,0.1,0.2,0.2,0.3,0.3,0.2,0.6,0.4,0.3,0.2,0.2,0.2,0.2],"type":"scatter3d"},{"hovertemplate":"species=versicolor<br>sepal_width=%{x}<br>sepal_length=%{y}<br>petal_width=%{z}<br>petal_length=%{marker.size}<extra></extra>","legendgroup":"versicolor","marker":{"color":"#EF553B","opacity":0.6,"size":[4.7,4.5,4.9,4.0,4.6,4.5,4.7,3.3,4.6,3.9,3.5,4.2,4.0,4.7,3.6,4.4,4.5,4.1,4.5,3.9,4.8,4.0,4.9,4.7,4.3,4.4,4.8,5.0,4.5,3.5,3.8,3.7,3.9,5.1,4.5,4.5,4.7,4.4,4.1,4.0,4.4,4.6,4.0,3.3,4.2,4.2,4.2,4.3,3.0,4.1],"sizemode":"area","sizeref":0.007666666666666667,"symbol":"circle"},"mode":"markers","name":"versicolor","scene":"scene","showlegend":true,"x":[3.2,3.2,3.1,2.3,2.8,2.8,3.3,2.4,2.9,2.7,2.0,3.0,2.2,2.9,2.9,3.1,3.0,2.7,2.2,2.5,3.2,2.8,2.5,2.8,2.9,3.0,2.8,3.0,2.9,2.6,2.4,2.4,2.7,2.7,3.0,3.4,3.1,2.3,3.0,2.5,2.6,3.0,2.6,2.3,2.7,3.0,2.9,2.9,2.5,2.8],"y":[7.0,6.4,6.9,5.5,6.5,5.7,6.3,4.9,6.6,5.2,5.0,5.9,6.0,6.1,5.6,6.7,5.6,5.8,6.2,5.6,5.9,6.1,6.3,6.1,6.4,6.6,6.8,6.7,6.0,5.7,5.5,5.5,5.8,6.0,5.4,6.0,6.7,6.3,5.6,5.5,5.5,6.1,5.8,5.0,5.6,5.7,5.7,6.2,5.1,5.7],"z":[1.4,1.5,1.5,1.3,1.5,1.3,1.6,1.0,1.3,1.4,1.0,1.5,1.0,1.4,1.3,1.4,1.5,1.0,1.5,1.1,1.8,1.3,1.5,1.2,1.3,1.4,1.4,1.7,1.5,1.0,1.1,1.0,1.2,1.6,1.5,1.6,1.5,1.3,1.3,1.3,1.2,1.4,1.2,1.0,1.3,1.2,1.3,1.3,1.1,1.3],"type":"scatter3d"},{"hovertemplate":"species=virginica<br>sepal_width=%{x}<br>sepal_length=%{y}<br>petal_width=%{z}<br>petal_length=%{marker.size}<extra></extra>","legendgroup":"virginica","marker":{"color":"#00cc96","opacity":0.6,"size":[6.0,5.1,5.9,5.6,5.8,6.6,4.5,6.3,5.8,6.1,5.1,5.3,5.5,5.0,5.1,5.3,5.5,6.7,6.9,5.0,5.7,4.9,6.7,4.9,5.7,6.0,4.8,4.9,5.6,5.8,6.1,6.4,5.6,5.1,5.6,6.1,5.6,5.5,4.8,5.4,5.6,5.1,5.1,5.9,5.7,5.2,5.0,5.2,5.4,5.1],"sizemode":"area","sizeref":0.007666666666666667,"symbol":"circle"},"mode":"markers","name":"virginica","scene":"scene","showlegend":true,"x":[3.3,2.7,3.0,2.9,3.0,3.0,2.5,2.9,2.5,3.6,3.2,2.7,3.0,2.5,2.8,3.2,3.0,3.8,2.6,2.2,3.2,2.8,2.8,2.7,3.3,3.2,2.8,3.0,2.8,3.0,2.8,3.8,2.8,2.8,2.6,3.0,3.4,3.1,3.0,3.1,3.1,3.1,2.7,3.2,3.3,3.0,2.5,3.0,3.4,3.0],"y":[6.3,5.8,7.1,6.3,6.5,7.6,4.9,7.3,6.7,7.2,6.5,6.4,6.8,5.7,5.8,6.4,6.5,7.7,7.7,6.0,6.9,5.6,7.7,6.3,6.7,7.2,6.2,6.1,6.4,7.2,7.4,7.9,6.4,6.3,6.1,7.7,6.3,6.4,6.0,6.9,6.7,6.9,5.8,6.8,6.7,6.7,6.3,6.5,6.2,5.9],"z":[2.5,1.9,2.1,1.8,2.2,2.1,1.7,1.8,1.8,2.5,2.0,1.9,2.1,2.0,2.4,2.3,1.8,2.2,2.3,1.5,2.3,2.0,2.0,1.8,2.1,1.8,1.8,1.8,2.1,1.6,1.9,2.0,2.2,1.5,1.4,2.3,2.4,1.8,1.8,2.1,2.4,2.3,1.9,2.3,2.5,2.3,1.9,2.0,2.3,1.8],"type":"scatter3d"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"scene":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"xaxis":{"title":{"text":"sepal_width"}},"yaxis":{"title":{"text":"sepal_length"}},"zaxis":{"title":{"text":"petal_width"}}},"legend":{"title":{"text":"species"},"tracegroupgap":0,"itemsizing":"constant"},"margin":{"t":60},"height":700},                        {"responsive": true}                    ).then(function(){
+        </div><div class="output text_html"><div>                            <div id="e9ac2ea4-d59b-4315-9133-0f71001de9d5" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("e9ac2ea4-d59b-4315-9133-0f71001de9d5")) {                    Plotly.newPlot(                        "e9ac2ea4-d59b-4315-9133-0f71001de9d5",                        [{"alignmentgroup":"True","hovertemplate":"Country=%{x}<br>Bipolar disorder (%)=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#636efa","pattern":{"shape":""}},"name":"","offsetgroup":"","orientation":"v","showlegend":false,"textposition":"auto","x":["Norway","Denmark","Iceland","Switzerland","Finland"],"xaxis":"x","y":[0.856901,1.005494,0.971122,0.953996,1.005826],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Country"},"type":"category"},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Bipolar disorder (%)"},"tickformat":",.0%"},"legend":{"tracegroupgap":0},"margin":{"t":60},"barmode":"group"},                        {"responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('006c8841-5e4f-44c4-ba24-6471add73679');
+var gd = document.getElementById('e9ac2ea4-d59b-4315-9133-0f71001de9d5');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -617,25 +979,130 @@ if (outputEl) {{
 
                         })                };                });            </script>        </div></div></div>
 </div>
-<p>You can also plot the data using static visualizations, such as the <a class="reference external" href="https://seaborn.pydata.org/#">seaborn</a> library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot the Iris dataset using seaborn</span>
-<span class="n">g2</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;species_id&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span>
-                  <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;species&#39;</span><span class="p">)</span>
-<span class="n">g2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pie</span><span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(),</span> <span class="n">values</span><span class="o">=</span> <span class="s1">&#39;Freedom&#39;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">)</span>
+
+<span class="n">pie</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Pie chart Freedom per country&#39;</span>
+<span class="p">)</span>
+
+<span class="n">pie</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.PairGrid at 0x137a4c310&gt;
+<div class="output text_html"><div>                            <div id="80a0ff67-3a6e-49c5-8496-c73c5073f395" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("80a0ff67-3a6e-49c5-8496-c73c5073f395")) {                    Plotly.newPlot(                        "80a0ff67-3a6e-49c5-8496-c73c5073f395",                        [{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"hovertemplate":"Country=%{label}<br>Freedom=%{value}<extra></extra>","labels":["Norway","Denmark","Iceland","Switzerland","Finland"],"legendgroup":"","name":"","showlegend":true,"values":[0.635422587394714,0.626006722450256,0.627162635326385,0.620070576667786,0.617950856685638],"type":"pie"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"legend":{"tracegroupgap":0},"margin":{"t":60},"title":{"text":"Pie chart Freedom per country"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('80a0ff67-3a6e-49c5-8496-c73c5073f395');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scatter</span><span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">scatter_3d</span><span class="p">(</span><span class="n">df</span><span class="p">,</span>
+                       <span class="n">x</span><span class="o">=</span> <span class="s1">&#39;Happiness.Score&#39;</span><span class="p">,</span>
+                       <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Anxiety disorders (%)&#39;</span><span class="p">,</span>
+                       <span class="n">z</span><span class="o">=</span><span class="s1">&#39;Depression (%)&#39;</span><span class="p">,</span>
+                       <span class="n">color</span><span class="o">=</span><span class="s1">&#39;Country&#39;</span><span class="p">,</span>
+                       <span class="n">opacity</span><span class="o">=</span> <span class="mf">0.7</span>
+
+
+<span class="p">)</span>
+
+<span class="n">scatter</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Relatie Happiness,Anxiety en Depressie per land&#39;</span>
+<span class="p">)</span>
+
+<span class="n">scatter</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<img alt="../_images/4cb5299e72a74a811e76332d4a7351d49179872331a9bbaaa5d03d47ebecb3ab.png" src="../_images/4cb5299e72a74a811e76332d4a7351d49179872331a9bbaaa5d03d47ebecb3ab.png" />
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="9b132bc3-08e1-4d95-8eed-7c281510a317" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("9b132bc3-08e1-4d95-8eed-7c281510a317")) {                    Plotly.newPlot(                        "9b132bc3-08e1-4d95-8eed-7c281510a317",                        [{"hovertemplate":"Country=Norway<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Norway","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Norway","scene":"scene","showlegend":true,"x":[7.53700017929077],"y":[7.585503],"z":[3.77191],"type":"scatter3d"},{"hovertemplate":"Country=Denmark<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Denmark","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Denmark","scene":"scene","showlegend":true,"x":[7.52199983596802],"y":[5.314635],"z":[3.291885],"type":"scatter3d"},{"hovertemplate":"Country=Iceland<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Iceland","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Iceland","scene":"scene","showlegend":true,"x":[7.50400018692017],"y":[5.290988],"z":[3.361665],"type":"scatter3d"},{"hovertemplate":"Country=Switzerland<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Switzerland","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Switzerland","scene":"scene","showlegend":true,"x":[7.49399995803833],"y":[5.359393],"z":[3.70806],"type":"scatter3d"},{"hovertemplate":"Country=Finland<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Finland","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Finland","scene":"scene","showlegend":true,"x":[7.4689998626709],"y":[3.752062],"z":[4.792736],"type":"scatter3d"},{"hovertemplate":"Country=Netherlands<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Netherlands","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Netherlands","scene":"scene","showlegend":true,"x":[7.3769998550415],"y":[6.620242],"z":[4.026854],"type":"scatter3d"},{"hovertemplate":"Country=Canada<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Canada","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Canada","scene":"scene","showlegend":true,"x":[7.31599998474121],"y":[5.178218],"z":[3.988792],"type":"scatter3d"},{"hovertemplate":"Country=New Zealand<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"New Zealand","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"New Zealand","scene":"scene","showlegend":true,"x":[7.31400012969971],"y":[8.539931],"z":[3.971265],"type":"scatter3d"},{"hovertemplate":"Country=Sweden<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Sweden","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Sweden","scene":"scene","showlegend":true,"x":[7.28399991989136],"y":[5.293837],"z":[4.487911],"type":"scatter3d"},{"hovertemplate":"Country=Australia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Australia","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Australia","scene":"scene","showlegend":true,"x":[7.28399991989136],"y":[6.584301],"z":[4.623881],"type":"scatter3d"},{"hovertemplate":"Country=Israel<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Israel","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Israel","scene":"scene","showlegend":true,"x":[7.21299982070923],"y":[3.063078],"z":[3.832221],"type":"scatter3d"},{"hovertemplate":"Country=Costa Rica<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Costa Rica","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Costa Rica","scene":"scene","showlegend":true,"x":[7.0789999961853],"y":[2.936829],"z":[2.904788],"type":"scatter3d"},{"hovertemplate":"Country=Austria<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Austria","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Austria","scene":"scene","showlegend":true,"x":[7.00600004196167],"y":[5.341275],"z":[3.26097],"type":"scatter3d"},{"hovertemplate":"Country=United States<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"United States","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"United States","scene":"scene","showlegend":true,"x":[6.99300003051758],"y":[6.635055],"z":[4.83561],"type":"scatter3d"},{"hovertemplate":"Country=Ireland<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Ireland","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Ireland","scene":"scene","showlegend":true,"x":[6.97700023651123],"y":[5.839092],"z":[4.250921],"type":"scatter3d"},{"hovertemplate":"Country=Germany<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Germany","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Germany","scene":"scene","showlegend":true,"x":[6.95100021362305],"y":[6.540496],"z":[3.959866],"type":"scatter3d"},{"hovertemplate":"Country=Belgium<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Belgium","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Belgium","scene":"scene","showlegend":true,"x":[6.89099979400635],"y":[5.212645],"z":[4.109186],"type":"scatter3d"},{"hovertemplate":"Country=Luxembourg<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Luxembourg","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Luxembourg","scene":"scene","showlegend":true,"x":[6.86299991607666],"y":[5.316516],"z":[3.617719],"type":"scatter3d"},{"hovertemplate":"Country=United Kingdom<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"United Kingdom","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"United Kingdom","scene":"scene","showlegend":true,"x":[6.71400022506714],"y":[4.649861],"z":[4.119524],"type":"scatter3d"},{"hovertemplate":"Country=Chile<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Chile","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Chile","scene":"scene","showlegend":true,"x":[6.65199995040894],"y":[6.272084],"z":[4.057723],"type":"scatter3d"},{"hovertemplate":"Country=United Arab Emirates<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"United Arab Emirates","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"United Arab Emirates","scene":"scene","showlegend":true,"x":[6.64799976348877],"y":[4.263912],"z":[2.877426],"type":"scatter3d"},{"hovertemplate":"Country=Brazil<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Brazil","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Brazil","scene":"scene","showlegend":true,"x":[6.63500022888184],"y":[6.06918],"z":[3.297368],"type":"scatter3d"},{"hovertemplate":"Country=Czech Republic<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Czech Republic","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Czech Republic","scene":"scene","showlegend":true,"x":[6.60900020599365],"y":[3.443601],"z":[2.675387],"type":"scatter3d"},{"hovertemplate":"Country=Argentina<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Argentina","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Argentina","scene":"scene","showlegend":true,"x":[6.59899997711182],"y":[6.283678],"z":[3.665488],"type":"scatter3d"},{"hovertemplate":"Country=Mexico<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Mexico","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Mexico","scene":"scene","showlegend":true,"x":[6.57800006866455],"y":[3.186326],"z":[2.788807],"type":"scatter3d"},{"hovertemplate":"Country=Singapore<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Singapore","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Singapore","scene":"scene","showlegend":true,"x":[6.57200002670288],"y":[3.730467],"z":[3.438271],"type":"scatter3d"},{"hovertemplate":"Country=Malta<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Malta","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Malta","scene":"scene","showlegend":true,"x":[6.52699995040894],"y":[5.317984],"z":[3.374137],"type":"scatter3d"},{"hovertemplate":"Country=Uruguay<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Uruguay","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Uruguay","scene":"scene","showlegend":true,"x":[6.4539999961853],"y":[6.317738],"z":[3.617574],"type":"scatter3d"},{"hovertemplate":"Country=Guatemala<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Guatemala","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Guatemala","scene":"scene","showlegend":true,"x":[6.4539999961853],"y":[2.906947],"z":[3.216025],"type":"scatter3d"},{"hovertemplate":"Country=Panama<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Panama","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Panama","scene":"scene","showlegend":true,"x":[6.4520001411438],"y":[2.891779],"z":[2.679025],"type":"scatter3d"},{"hovertemplate":"Country=France<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"France","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"France","scene":"scene","showlegend":true,"x":[6.44199991226196],"y":[6.62671],"z":[4.253807],"type":"scatter3d"},{"hovertemplate":"Country=Thailand<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Thailand","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Thailand","scene":"scene","showlegend":true,"x":[6.42399978637695],"y":[3.329594],"z":[3.085057],"type":"scatter3d"},{"hovertemplate":"Country=Spain<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Spain","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Spain","scene":"scene","showlegend":true,"x":[6.40299987792969],"y":[5.280279],"z":[3.538359],"type":"scatter3d"},{"hovertemplate":"Country=Qatar<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Qatar","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Qatar","scene":"scene","showlegend":true,"x":[6.375],"y":[4.336059],"z":[3.482327],"type":"scatter3d"},{"hovertemplate":"Country=Colombia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Colombia","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Colombia","scene":"scene","showlegend":true,"x":[6.35699987411499],"y":[2.514803],"z":[2.196154],"type":"scatter3d"},{"hovertemplate":"Country=Saudi Arabia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Saudi Arabia","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Saudi Arabia","scene":"scene","showlegend":true,"x":[6.3439998626709],"y":[4.754236],"z":[3.536847],"type":"scatter3d"},{"hovertemplate":"Country=Trinidad and Tobago<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Trinidad and Tobago","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Trinidad and Tobago","scene":"scene","showlegend":true,"x":[6.16800022125244],"y":[4.629351],"z":[3.329938],"type":"scatter3d"},{"hovertemplate":"Country=Kuwait<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Kuwait","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Kuwait","scene":"scene","showlegend":true,"x":[6.10500001907349],"y":[4.967279],"z":[3.635679],"type":"scatter3d"},{"hovertemplate":"Country=Slovakia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Slovakia","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Slovakia","scene":"scene","showlegend":true,"x":[6.09800004959106],"y":[3.444251],"z":[2.401999],"type":"scatter3d"},{"hovertemplate":"Country=Bahrain<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Bahrain","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Bahrain","scene":"scene","showlegend":true,"x":[6.08699989318848],"y":[4.673304],"z":[3.879105],"type":"scatter3d"},{"hovertemplate":"Country=Malaysia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Malaysia","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Malaysia","scene":"scene","showlegend":true,"x":[6.08400011062622],"y":[4.340783],"z":[3.520854],"type":"scatter3d"},{"hovertemplate":"Country=Nicaragua<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Nicaragua","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Nicaragua","scene":"scene","showlegend":true,"x":[6.07100009918213],"y":[2.9123],"z":[2.854084],"type":"scatter3d"},{"hovertemplate":"Country=Ecuador<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Ecuador","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Ecuador","scene":"scene","showlegend":true,"x":[6.00799989700317],"y":[4.305357],"z":[2.977117],"type":"scatter3d"},{"hovertemplate":"Country=El Salvador<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"El Salvador","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"El Salvador","scene":"scene","showlegend":true,"x":[6.00299978256226],"y":[2.94522],"z":[3.025887],"type":"scatter3d"},{"hovertemplate":"Country=Poland<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Poland","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Poland","scene":"scene","showlegend":true,"x":[5.97300004959106],"y":[3.461075],"z":[2.250472],"type":"scatter3d"},{"hovertemplate":"Country=Uzbekistan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Uzbekistan","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Uzbekistan","scene":"scene","showlegend":true,"x":[5.97100019454956],"y":[2.560435],"z":[2.886924],"type":"scatter3d"},{"hovertemplate":"Country=Italy<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Italy","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Italy","scene":"scene","showlegend":true,"x":[5.96400022506714],"y":[5.626121],"z":[3.464256],"type":"scatter3d"},{"hovertemplate":"Country=Russia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Russia","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Russia","scene":"scene","showlegend":true,"x":[5.96299982070923],"y":[2.945051],"z":[3.707925],"type":"scatter3d"},{"hovertemplate":"Country=Belize<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Belize","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Belize","scene":"scene","showlegend":true,"x":[5.95599985122681],"y":[4.568548],"z":[2.838667],"type":"scatter3d"},{"hovertemplate":"Country=Japan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Japan","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Japan","scene":"scene","showlegend":true,"x":[5.92000007629395],"y":[3.569054],"z":[3.341565],"type":"scatter3d"},{"hovertemplate":"Country=Lithuania<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Lithuania","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Lithuania","scene":"scene","showlegend":true,"x":[5.90199995040894],"y":[2.937224],"z":[4.143254],"type":"scatter3d"},{"hovertemplate":"Country=Algeria<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Algeria","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Algeria","scene":"scene","showlegend":true,"x":[5.87200021743774],"y":[5.065876],"z":[3.661094],"type":"scatter3d"},{"hovertemplate":"Country=Latvia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Latvia","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Latvia","scene":"scene","showlegend":true,"x":[5.84999990463257],"y":[2.94495],"z":[3.499571],"type":"scatter3d"},{"hovertemplate":"Country=South Korea<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"South Korea","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"South Korea","scene":"scene","showlegend":true,"x":[5.83799982070923],"y":[3.778005],"z":[3.165684],"type":"scatter3d"},{"hovertemplate":"Country=Moldova<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Moldova","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Moldova","scene":"scene","showlegend":true,"x":[5.83799982070923],"y":[2.887918],"z":[3.432549],"type":"scatter3d"},{"hovertemplate":"Country=Romania<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Romania","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Romania","scene":"scene","showlegend":true,"x":[5.82499980926514],"y":[3.227186],"z":[2.359174],"type":"scatter3d"},{"hovertemplate":"Country=Bolivia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Bolivia","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Bolivia","scene":"scene","showlegend":true,"x":[5.82299995422363],"y":[4.243625],"z":[3.085905],"type":"scatter3d"},{"hovertemplate":"Country=Turkmenistan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Turkmenistan","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Turkmenistan","scene":"scene","showlegend":true,"x":[5.82200002670288],"y":[2.567311],"z":[2.823086],"type":"scatter3d"},{"hovertemplate":"Country=Kazakhstan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Kazakhstan","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Kazakhstan","scene":"scene","showlegend":true,"x":[5.81899976730347],"y":[2.607806],"z":[3.511775],"type":"scatter3d"},{"hovertemplate":"Country=Slovenia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Slovenia","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Slovenia","scene":"scene","showlegend":true,"x":[5.75799989700317],"y":[3.449773],"z":[2.863278],"type":"scatter3d"},{"hovertemplate":"Country=Peru<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Peru","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Peru","scene":"scene","showlegend":true,"x":[5.71500015258789],"y":[4.259925],"z":[2.276321],"type":"scatter3d"},{"hovertemplate":"Country=Mauritius<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Mauritius","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Mauritius","scene":"scene","showlegend":true,"x":[5.62900018692017],"y":[3.322963],"z":[3.478524],"type":"scatter3d"},{"hovertemplate":"Country=Cyprus<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Cyprus","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Cyprus","scene":"scene","showlegend":true,"x":[5.62099981307983],"y":[5.304908],"z":[3.328111],"type":"scatter3d"},{"hovertemplate":"Country=Estonia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Estonia","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Estonia","scene":"scene","showlegend":true,"x":[5.61100006103516],"y":[2.962244],"z":[3.848854],"type":"scatter3d"},{"hovertemplate":"Country=Belarus<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Belarus","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Belarus","scene":"scene","showlegend":true,"x":[5.56899976730347],"y":[2.946932],"z":[4.022226],"type":"scatter3d"},{"hovertemplate":"Country=Libya<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Libya","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Libya","scene":"scene","showlegend":true,"x":[5.52500009536743],"y":[4.97646],"z":[3.804791],"type":"scatter3d"},{"hovertemplate":"Country=Turkey<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Turkey","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Turkey","scene":"scene","showlegend":true,"x":[5.5],"y":[3.9134],"z":[3.718658],"type":"scatter3d"},{"hovertemplate":"Country=Paraguay<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Paraguay","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Paraguay","scene":"scene","showlegend":true,"x":[5.49300003051758],"y":[6.015214],"z":[2.95884],"type":"scatter3d"},{"hovertemplate":"Country=Philippines<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Philippines","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Philippines","scene":"scene","showlegend":true,"x":[5.42999982833862],"y":[3.26972],"z":[2.765176],"type":"scatter3d"},{"hovertemplate":"Country=Serbia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Serbia","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Serbia","scene":"scene","showlegend":true,"x":[5.39499998092651],"y":[3.404672],"z":[2.570068],"type":"scatter3d"},{"hovertemplate":"Country=Jordan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Jordan","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Jordan","scene":"scene","showlegend":true,"x":[5.33599996566772],"y":[4.88835],"z":[3.563602],"type":"scatter3d"},{"hovertemplate":"Country=Hungary<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Hungary","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Hungary","scene":"scene","showlegend":true,"x":[5.32399988174438],"y":[3.454657],"z":[2.765242],"type":"scatter3d"},{"hovertemplate":"Country=Jamaica<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Jamaica","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Jamaica","scene":"scene","showlegend":true,"x":[5.31099987030029],"y":[4.577528],"z":[2.592385],"type":"scatter3d"},{"hovertemplate":"Country=Croatia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Croatia","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Croatia","scene":"scene","showlegend":true,"x":[5.29300022125244],"y":[3.447606],"z":[2.779842],"type":"scatter3d"},{"hovertemplate":"Country=China<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"China","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"China","scene":"scene","showlegend":true,"x":[5.27299976348877],"y":[3.030969],"z":[3.311306],"type":"scatter3d"},{"hovertemplate":"Country=Pakistan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Pakistan","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Pakistan","scene":"scene","showlegend":true,"x":[5.26900005340576],"y":[3.823379],"z":[3.33128],"type":"scatter3d"},{"hovertemplate":"Country=Indonesia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Indonesia","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Indonesia","scene":"scene","showlegend":true,"x":[5.26200008392334],"y":[3.28022],"z":[2.642736],"type":"scatter3d"},{"hovertemplate":"Country=Venezuela<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Venezuela","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Venezuela","scene":"scene","showlegend":true,"x":[5.25],"y":[2.866789],"z":[2.814584],"type":"scatter3d"},{"hovertemplate":"Country=Montenegro<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Montenegro","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Montenegro","scene":"scene","showlegend":true,"x":[5.23699998855591],"y":[3.423967],"z":[2.55864],"type":"scatter3d"},{"hovertemplate":"Country=Morocco<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Morocco","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Morocco","scene":"scene","showlegend":true,"x":[5.2350001335144],"y":[4.986826],"z":[5.413573],"type":"scatter3d"},{"hovertemplate":"Country=Azerbaijan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Azerbaijan","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Azerbaijan","scene":"scene","showlegend":true,"x":[5.23400020599365],"y":[2.583157],"z":[2.592293],"type":"scatter3d"},{"hovertemplate":"Country=Dominican Republic<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Dominican Republic","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Dominican Republic","scene":"scene","showlegend":true,"x":[5.23000001907349],"y":[4.558309],"z":[2.978523],"type":"scatter3d"},{"hovertemplate":"Country=Greece<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Greece","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Greece","scene":"scene","showlegend":true,"x":[5.22700023651123],"y":[5.790228],"z":[4.185864],"type":"scatter3d"},{"hovertemplate":"Country=Lebanon<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Lebanon","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Lebanon","scene":"scene","showlegend":true,"x":[5.22499990463257],"y":[6.074356],"z":[3.676734],"type":"scatter3d"},{"hovertemplate":"Country=Portugal<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Portugal","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Portugal","scene":"scene","showlegend":true,"x":[5.19500017166138],"y":[5.383261],"z":[4.421461],"type":"scatter3d"},{"hovertemplate":"Country=Bosnia and Herzegovina<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Bosnia and Herzegovina","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Bosnia and Herzegovina","scene":"scene","showlegend":true,"x":[5.18200016021729],"y":[3.402636],"z":[2.31961],"type":"scatter3d"},{"hovertemplate":"Country=Honduras<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Honduras","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Honduras","scene":"scene","showlegend":true,"x":[5.18100023269653],"y":[2.875551],"z":[2.752301],"type":"scatter3d"},{"hovertemplate":"Country=Macedonia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Macedonia","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Macedonia","scene":"scene","showlegend":true,"x":[5.17500019073486],"y":[3.391595],"z":[2.332386],"type":"scatter3d"},{"hovertemplate":"Country=Somalia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Somalia","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Somalia","scene":"scene","showlegend":true,"x":[5.15100002288818],"y":[3.568698],"z":[3.784748],"type":"scatter3d"},{"hovertemplate":"Country=Vietnam<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Vietnam","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Vietnam","scene":"scene","showlegend":true,"x":[5.07399988174438],"y":[2.066871],"z":[2.87945],"type":"scatter3d"},{"hovertemplate":"Country=Nigeria<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Nigeria","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Nigeria","scene":"scene","showlegend":true,"x":[5.07399988174438],"y":[2.915837],"z":[3.917691],"type":"scatter3d"},{"hovertemplate":"Country=Tajikistan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Tajikistan","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Tajikistan","scene":"scene","showlegend":true,"x":[5.04099988937378],"y":[2.524336],"z":[2.563961],"type":"scatter3d"},{"hovertemplate":"Country=Bhutan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Bhutan","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Bhutan","scene":"scene","showlegend":true,"x":[5.01100015640259],"y":[3.801432],"z":[3.439334],"type":"scatter3d"},{"hovertemplate":"Country=Kyrgyzstan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Kyrgyzstan","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Kyrgyzstan","scene":"scene","showlegend":true,"x":[5.00400018692017],"y":[2.562742],"z":[3.053673],"type":"scatter3d"},{"hovertemplate":"Country=Nepal<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Nepal","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Nepal","scene":"scene","showlegend":true,"x":[4.96199989318848],"y":[3.879455],"z":[3.606939],"type":"scatter3d"},{"hovertemplate":"Country=Mongolia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Mongolia","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Mongolia","scene":"scene","showlegend":true,"x":[4.95499992370605],"y":[2.57518],"z":[3.525488],"type":"scatter3d"},{"hovertemplate":"Country=South Africa<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"South Africa","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"South Africa","scene":"scene","showlegend":true,"x":[4.8289999961853],"y":[3.99283],"z":[3.745871],"type":"scatter3d"},{"hovertemplate":"Country=Tunisia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Tunisia","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Tunisia","scene":"scene","showlegend":true,"x":[4.80499982833862],"y":[5.072361],"z":[3.915189],"type":"scatter3d"},{"hovertemplate":"Country=Egypt<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Egypt","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Egypt","scene":"scene","showlegend":true,"x":[4.7350001335144],"y":[4.361023],"z":[3.238182],"type":"scatter3d"},{"hovertemplate":"Country=Bulgaria<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Bulgaria","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Bulgaria","scene":"scene","showlegend":true,"x":[4.71400022506714],"y":[3.587521],"z":[2.543141],"type":"scatter3d"},{"hovertemplate":"Country=Sierra Leone<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Sierra Leone","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Sierra Leone","scene":"scene","showlegend":true,"x":[4.70900011062622],"y":[2.880725],"z":[3.581501],"type":"scatter3d"},{"hovertemplate":"Country=Cameroon<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Cameroon","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Cameroon","scene":"scene","showlegend":true,"x":[4.69500017166138],"y":[2.908663],"z":[3.745647],"type":"scatter3d"},{"hovertemplate":"Country=Iran<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Iran","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Iran","scene":"scene","showlegend":true,"x":[4.69199991226196],"y":[6.9009],"z":[5.116345],"type":"scatter3d"},{"hovertemplate":"Country=Albania<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Albania","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Albania","scene":"scene","showlegend":true,"x":[4.64400005340576],"y":[3.385245],"z":[2.208414],"type":"scatter3d"},{"hovertemplate":"Country=Bangladesh<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Bangladesh","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Bangladesh","scene":"scene","showlegend":true,"x":[4.60799980163574],"y":[4.283989],"z":[4.110611],"type":"scatter3d"},{"hovertemplate":"Country=Namibia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Namibia","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Namibia","scene":"scene","showlegend":true,"x":[4.57399988174438],"y":[3.508308],"z":[3.45997],"type":"scatter3d"},{"hovertemplate":"Country=Kenya<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Kenya","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Kenya","scene":"scene","showlegend":true,"x":[4.55299997329712],"y":[3.643353],"z":[3.508419],"type":"scatter3d"},{"hovertemplate":"Country=Mozambique<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Mozambique","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Mozambique","scene":"scene","showlegend":true,"x":[4.55000019073486],"y":[3.672136],"z":[3.901795],"type":"scatter3d"},{"hovertemplate":"Country=Myanmar<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Myanmar","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Myanmar","scene":"scene","showlegend":true,"x":[4.54500007629395],"y":[3.313936],"z":[2.300982],"type":"scatter3d"},{"hovertemplate":"Country=Senegal<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Senegal","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Senegal","scene":"scene","showlegend":true,"x":[4.53499984741211],"y":[2.899331],"z":[3.370497],"type":"scatter3d"},{"hovertemplate":"Country=Zambia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Zambia","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Zambia","scene":"scene","showlegend":true,"x":[4.51399993896484],"y":[3.599714],"z":[3.641811],"type":"scatter3d"},{"hovertemplate":"Country=Iraq<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Iraq","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Iraq","scene":"scene","showlegend":true,"x":[4.49700021743774],"y":[4.722673],"z":[3.891163],"type":"scatter3d"},{"hovertemplate":"Country=Gabon<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Gabon","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Gabon","scene":"scene","showlegend":true,"x":[4.46500015258789],"y":[3.299512],"z":[4.049029],"type":"scatter3d"},{"hovertemplate":"Country=Ethiopia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Ethiopia","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Ethiopia","scene":"scene","showlegend":true,"x":[4.46000003814697],"y":[3.731997],"z":[3.816266],"type":"scatter3d"},{"hovertemplate":"Country=Sri Lanka<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Sri Lanka","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Sri Lanka","scene":"scene","showlegend":true,"x":[4.44000005722046],"y":[3.369917],"z":[3.44333],"type":"scatter3d"},{"hovertemplate":"Country=Armenia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Armenia","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Armenia","scene":"scene","showlegend":true,"x":[4.37599992752075],"y":[2.592813],"z":[2.754583],"type":"scatter3d"},{"hovertemplate":"Country=India<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"India","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"India","scene":"scene","showlegend":true,"x":[4.31500005722046],"y":[3.301939],"z":[3.529853],"type":"scatter3d"},{"hovertemplate":"Country=Mauritania<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Mauritania","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Mauritania","scene":"scene","showlegend":true,"x":[4.29199981689453],"y":[2.933461],"z":[3.094161],"type":"scatter3d"},{"hovertemplate":"Country=Georgia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Georgia","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Georgia","scene":"scene","showlegend":true,"x":[4.28599977493286],"y":[2.602456],"z":[2.797379],"type":"scatter3d"},{"hovertemplate":"Country=Mali<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Mali","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Mali","scene":"scene","showlegend":true,"x":[4.19000005722046],"y":[2.888672],"z":[3.00742],"type":"scatter3d"},{"hovertemplate":"Country=Cambodia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Cambodia","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Cambodia","scene":"scene","showlegend":true,"x":[4.16800022125244],"y":[3.289745],"z":[3.094945],"type":"scatter3d"},{"hovertemplate":"Country=Sudan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Sudan","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Sudan","scene":"scene","showlegend":true,"x":[4.13899993896484],"y":[4.899048],"z":[3.781451],"type":"scatter3d"},{"hovertemplate":"Country=Ghana<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Ghana","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Ghana","scene":"scene","showlegend":true,"x":[4.11999988555908],"y":[2.936416],"z":[3.396647],"type":"scatter3d"},{"hovertemplate":"Country=Ukraine<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Ukraine","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Ukraine","scene":"scene","showlegend":true,"x":[4.09600019454956],"y":[2.94177],"z":[4.071915],"type":"scatter3d"},{"hovertemplate":"Country=Uganda<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Uganda","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Uganda","scene":"scene","showlegend":true,"x":[4.08099985122681],"y":[3.526626],"z":[4.918028],"type":"scatter3d"},{"hovertemplate":"Country=Burkina Faso<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Burkina Faso","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Burkina Faso","scene":"scene","showlegend":true,"x":[4.03200006484985],"y":[2.900239],"z":[3.694254],"type":"scatter3d"},{"hovertemplate":"Country=Niger<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Niger","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Niger","scene":"scene","showlegend":true,"x":[4.02799987792969],"y":[2.891358],"z":[3.463055],"type":"scatter3d"},{"hovertemplate":"Country=Malawi<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Malawi","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Malawi","scene":"scene","showlegend":true,"x":[3.97000002861023],"y":[3.660937],"z":[3.446137],"type":"scatter3d"},{"hovertemplate":"Country=Chad<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Chad","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Chad","scene":"scene","showlegend":true,"x":[3.93600010871887],"y":[2.887049],"z":[3.874837],"type":"scatter3d"},{"hovertemplate":"Country=Zimbabwe<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Zimbabwe","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Zimbabwe","scene":"scene","showlegend":true,"x":[3.875],"y":[3.110926],"z":[3.192789],"type":"scatter3d"},{"hovertemplate":"Country=Lesotho<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Lesotho","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Lesotho","scene":"scene","showlegend":true,"x":[3.80800008773804],"y":[3.481456],"z":[5.636661],"type":"scatter3d"},{"hovertemplate":"Country=Angola<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Angola","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Angola","scene":"scene","showlegend":true,"x":[3.79500007629395],"y":[3.296906],"z":[4.160484],"type":"scatter3d"},{"hovertemplate":"Country=Afghanistan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Afghanistan","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Afghanistan","scene":"scene","showlegend":true,"x":[3.79399991035461],"y":[4.882481],"z":[4.136347],"type":"scatter3d"},{"hovertemplate":"Country=Botswana<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Botswana","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Botswana","scene":"scene","showlegend":true,"x":[3.76600003242493],"y":[3.506339],"z":[3.968129],"type":"scatter3d"},{"hovertemplate":"Country=Benin<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Benin","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Benin","scene":"scene","showlegend":true,"x":[3.65700006484985],"y":[2.905294],"z":[3.629899],"type":"scatter3d"},{"hovertemplate":"Country=Madagascar<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Madagascar","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Madagascar","scene":"scene","showlegend":true,"x":[3.64400005340576],"y":[3.583301],"z":[3.708514],"type":"scatter3d"},{"hovertemplate":"Country=Haiti<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Haiti","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Haiti","scene":"scene","showlegend":true,"x":[3.6029999256134],"y":[4.518425],"z":[2.957782],"type":"scatter3d"},{"hovertemplate":"Country=Yemen<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Yemen","marker":{"color":"#B6E880","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Yemen","scene":"scene","showlegend":true,"x":[3.59299993515015],"y":[4.857207],"z":[4.012346],"type":"scatter3d"},{"hovertemplate":"Country=South Sudan<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"South Sudan","marker":{"color":"#FF97FF","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"South Sudan","scene":"scene","showlegend":true,"x":[3.59100008010864],"y":[3.553077],"z":[3.699147],"type":"scatter3d"},{"hovertemplate":"Country=Liberia<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Liberia","marker":{"color":"#FECB52","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Liberia","scene":"scene","showlegend":true,"x":[3.53299999237061],"y":[2.881373],"z":[3.803038],"type":"scatter3d"},{"hovertemplate":"Country=Guinea<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Guinea","marker":{"color":"#636efa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Guinea","scene":"scene","showlegend":true,"x":[3.50699996948242],"y":[2.901304],"z":[3.560933],"type":"scatter3d"},{"hovertemplate":"Country=Togo<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Togo","marker":{"color":"#EF553B","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Togo","scene":"scene","showlegend":true,"x":[3.49499988555908],"y":[2.910945],"z":[3.656725],"type":"scatter3d"},{"hovertemplate":"Country=Rwanda<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Rwanda","marker":{"color":"#00cc96","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Rwanda","scene":"scene","showlegend":true,"x":[3.47099995613098],"y":[3.702435],"z":[3.86945],"type":"scatter3d"},{"hovertemplate":"Country=Syria<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Syria","marker":{"color":"#ab63fa","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Syria","scene":"scene","showlegend":true,"x":[3.46199989318848],"y":[4.974985],"z":[3.582073],"type":"scatter3d"},{"hovertemplate":"Country=Tanzania<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Tanzania","marker":{"color":"#FFA15A","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Tanzania","scene":"scene","showlegend":true,"x":[3.34899997711182],"y":[3.636165],"z":[3.685748],"type":"scatter3d"},{"hovertemplate":"Country=Burundi<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Burundi","marker":{"color":"#19d3f3","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Burundi","scene":"scene","showlegend":true,"x":[2.90499997138977],"y":[3.58576],"z":[3.721228],"type":"scatter3d"},{"hovertemplate":"Country=Central African Republic<br>Happiness.Score=%{x}<br>Anxiety disorders (%)=%{y}<br>Depression (%)=%{z}<extra></extra>","legendgroup":"Central African Republic","marker":{"color":"#FF6692","opacity":0.7,"symbol":"circle"},"mode":"markers","name":"Central African Republic","scene":"scene","showlegend":true,"x":[2.69300007820129],"y":[3.24999],"z":[4.211728],"type":"scatter3d"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"scene":{"domain":{"x":[0.0,1.0],"y":[0.0,1.0]},"xaxis":{"title":{"text":"Happiness.Score"}},"yaxis":{"title":{"text":"Anxiety disorders (%)"}},"zaxis":{"title":{"text":"Depression (%)"}}},"legend":{"title":{"text":"Country"},"tracegroupgap":0},"margin":{"t":60},"title":{"text":"Relatie Happiness,Anxiety en Depressie per land"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('9b132bc3-08e1-4d95-8eed-7c281510a317');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">box</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Depression (%)&#39;</span><span class="p">)</span>
+<span class="n">box</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Boxplot depressie wereld&#39;</span>
+<span class="p">)</span>
+
+<span class="n">box</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
 </div>
 </div>
-</section>
-</section>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>                            <div id="3e65ca7a-803d-48bc-8a48-65effb4564e3" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("3e65ca7a-803d-48bc-8a48-65effb4564e3")) {                    Plotly.newPlot(                        "3e65ca7a-803d-48bc-8a48-65effb4564e3",                        [{"alignmentgroup":"True","hovertemplate":"Depression (%)=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#636efa"},"name":"","notched":false,"offsetgroup":"","orientation":"v","showlegend":false,"x0":" ","xaxis":"x","y":[3.77191,3.291885,3.361665,3.70806,4.792736,4.026854,3.988792,3.971265,4.487911,4.623881,3.832221,2.904788,3.26097,4.83561,4.250921,3.959866,4.109186,3.617719,4.119524,4.057723,2.877426,3.297368,2.675387,3.665488,2.788807,3.438271,3.374137,3.617574,3.216025,2.679025,4.253807,3.085057,3.538359,3.482327,2.196154,3.536847,3.329938,3.635679,2.401999,3.879105,3.520854,2.854084,2.977117,3.025887,2.250472,2.886924,3.464256,3.707925,2.838667,3.341565,4.143254,3.661094,3.499571,3.165684,3.432549,2.359174,3.085905,2.823086,3.511775,2.863278,2.276321,3.478524,3.328111,3.848854,4.022226,3.804791,3.718658,2.95884,2.765176,2.570068,3.563602,2.765242,2.592385,2.779842,3.311306,3.33128,2.642736,2.814584,2.55864,5.413573,2.592293,2.978523,4.185864,3.676734,4.421461,2.31961,2.752301,2.332386,3.784748,2.87945,3.917691,2.563961,3.439334,3.053673,3.606939,3.525488,3.745871,3.915189,3.238182,2.543141,3.581501,3.745647,5.116345,2.208414,4.110611,3.45997,3.508419,3.901795,2.300982,3.370497,3.641811,3.891163,4.049029,3.816266,3.44333,2.754583,3.529853,3.094161,2.797379,3.00742,3.094945,3.781451,3.396647,4.071915,4.918028,3.694254,3.463055,3.446137,3.874837,3.192789,5.636661,4.160484,4.136347,3.968129,3.629899,3.708514,2.957782,4.012346,3.699147,3.803038,3.560933,3.656725,3.86945,3.582073,3.685748,3.721228,4.211728],"y0":" ","yaxis":"y","type":"box"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Depression (%)"}},"legend":{"tracegroupgap":0},"margin":{"t":60},"boxmode":"group","title":{"text":"Boxplot depressie wereld"}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('3e65ca7a-803d-48bc-8a48-65effb4564e3');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div></div></div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -668,15 +1135,6 @@ if (outputEl) {{
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="home.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Jupyter Book Tutorial</p>
-      </div>
-    </a>
 </div></div>
   
 </div>
@@ -694,10 +1152,9 @@ if (outputEl) {{
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data">Load data</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#plot-data">Plot data</a></li>
+    <ul class="simple visible nav section-nav flex-column">
 </ul>
+
   </nav></div>
 
 </div></div>
